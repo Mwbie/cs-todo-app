@@ -1,0 +1,195 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #333;
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 15px;
+  background: url(../images/back.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  min-height: 100vh;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container h2 {
+  text-align: center;
+  color: #fff;
+  font-family: fantasy;
+  letter-spacing: 0.1rem;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bolder;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #fff;
+  font-family: fantasy;
+  letter-spacing: 0.1rem;
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bolder;
+
+}
+.form-group input {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555;
+  /* vertical-align: middle; */
+  background-color: #fff;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+#addButton {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+#clearButton {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+  font-family: fantasy;
+  letter-spacing: 0.1rem;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bolder;
+
+}
+#todoList {
+  margin-top: 0;
+  margin-bottom: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(250px, 1fr));
+  gap: 5px;
+}
+
+#todoList label {
+  width: 65%;
+  display: inline-block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  
+}
+#todoList li {
+  list-style-type: none;
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.completed label ,  .btnComplete {
+  color: #afa7a7;
+  text-decoration: line-through;
+}
+
+#todoList .btn {
+  margin-left: 10px;
+}
+#btnComplete {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  width: 90px;
+}
+#btnDelete {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  width: 90px;
+}
+@media  screen and (max-width:606px) {
+  body{
+    background-position: center;
+  }
+  #todoList {
+    grid-template-columns: repeat(2, 1fr);
+    
+  }
+}
