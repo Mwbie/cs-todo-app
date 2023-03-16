@@ -54,7 +54,13 @@ const todosGenerator = (todosList) => {
         newLabel.innerHTML = todo.title;
         newCompleteBtn = document.createElement('button');
         newCompleteBtn.id = 'btnComplete';
-        newCompleteBtn.innerHTML = 'Complete';
+        if(todo.complete){
+            newCompleteBtn.innerHTML = 'done';
+            newCompleteBtn.style.opacity = '0.5'
+        }else{
+            newCompleteBtn.innerHTML = 'Complete';
+        }
+       
         newCompleteBtn.classList.add('completeBtn');
         newDeleteBtn = document.createElement('button');
         newDeleteBtn.id = 'btnDelete';
@@ -88,6 +94,8 @@ todoListElement.addEventListener('click', (e) => {
             todosArray[todoIndex].complete = true;
             setLocalStorage(todosArray);
             e.target.parentNode.classList.add('completed');
+            e.target.innerHTML = 'done';
+            e.target.style.opacity = '0.5'
         }
     }
 });
