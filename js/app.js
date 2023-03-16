@@ -54,13 +54,13 @@ const todosGenerator = (todosList) => {
         newLabel.innerHTML = todo.title;
         newCompleteBtn = document.createElement('button');
         newCompleteBtn.id = 'btnComplete';
-        if(todo.complete){
+        if (todo.complete) {
             newCompleteBtn.innerHTML = 'done';
             newCompleteBtn.style.opacity = '0.5'
-        }else{
+        } else {
             newCompleteBtn.innerHTML = 'Complete';
         }
-       
+
         newCompleteBtn.classList.add('completeBtn');
         newDeleteBtn = document.createElement('button');
         newDeleteBtn.id = 'btnDelete';
